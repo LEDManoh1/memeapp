@@ -361,10 +361,10 @@
         return;
       }
 
-      // Draw image
+     
       ctx.drawImage(currentImage, 0, 0, canvas.width, canvas.height);
 
-      // Setup text styling
+      
       const fontSize = parseInt(fontSizeInput.value);
       ctx.font = `bold ${fontSize}px Impact, Arial Black, sans-serif`;
       ctx.fillStyle = textColorInput.value;
@@ -373,7 +373,7 @@
       ctx.textAlign = 'center';
       ctx.textBaseline = 'top';
 
-      // Draw top text
+     
       const topText = topTextInput.value.toUpperCase();
       if (topText) {
         const topY = 20;
@@ -381,7 +381,7 @@
         ctx.fillText(topText, canvas.width / 2, topY);
       }
 
-      // Draw bottom text
+   
       const bottomText = bottomTextInput.value.toUpperCase();
       if (bottomText) {
         const bottomY = canvas.height - fontSize - 20;
@@ -404,7 +404,7 @@
       img.src = src;
     }
 
-    // Event listeners
+ 
     topTextInput.addEventListener('input', drawMeme);
     bottomTextInput.addEventListener('input', drawMeme);
     fontSizeInput.addEventListener('input', drawMeme);
@@ -433,7 +433,7 @@
       link.click();
     });
 
-    // Load templates
+   
     const templatesGrid = document.getElementById('templates-grid');
     templates.forEach(template => {
       const card = document.createElement('div');
@@ -448,10 +448,10 @@
       templatesGrid.appendChild(card);
     });
 
-    // Initial draw
+    
     drawMeme();
 
-    // Element SDK Integration
+    
     async function onConfigChange(config) {
       const appTitle = config.app_title || defaultConfig.app_title;
       const uploadButtonText = config.upload_button_text || defaultConfig.upload_button_text;
